@@ -28,7 +28,7 @@
 <meta property="og:image" content="http://yoursite.com/img/20180621/git插件.png">
 <meta property="og:image" content="http://yoursite.com/img/20180621/gitsettings.png">
 <meta property="og:image" content="http://yoursite.com/img/20180621/d-g.png">
-<meta property="og:updated_time" content="2018-06-20T20:24:39.604Z">
+<meta property="og:updated_time" content="2018-06-21T16:18:45.153Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo + Github博客搭建个人博客（一）">
 <meta name="twitter:description" content="前言：之前也写过一些博客文章记录学习心得，但使用的平台比较散乱。这次决心搭建一个个人的博客网站，坚持记录和分享自己的一些学习经验。使用github的免费空间，结合hexo的灵活性管理博客文章，以下是一个简单的搭建教程，写得不足之处望请指正！">
@@ -75,9 +75,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/archives">印记</a></li>
 	        
-				<li><a href="/archives">所有文章</a></li>
+				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -160,9 +160,9 @@
 				
 					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives">印记</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/archives">所有文章</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -211,7 +211,7 @@
 <p><img src="/img/20180621/创建仓库.png" alt="创建仓库"></p>
 <p>仓库创建成功后进入仓库，点击仓库右上角的 <code>Settings</code> 进入设置界面。可以设置相应的分支和选择一个默认的网站主题，分支默认为master。选好主题后在浏览器输入<strong>https://用户名.github.io/</strong>就能访问到简单的个人网站界面。</p>
 <p><img src="/img/20180621/settings.png" alt="修改设置"></p>
-<h1 id="三、使用Hexo"><a href="#三、使用Hexo" class="headerlink" title="三、使用Hexo"></a>三、使用Hexo</h1><h3 id="1、安装hexo"><a href="#1、安装hexo" class="headerlink" title="1、安装hexo"></a>1、安装hexo</h3><p>在电脑硬盘里单独建立一个文件夹（此处在E盘建立bolg文件夹，一下演示均是在此文件夹下），打开 node.js 的控制台，输入以下代码安装 hexo。</p>
+<h1 id="三、使用Hexo"><a href="#三、使用Hexo" class="headerlink" title="三、使用Hexo"></a>三、使用Hexo</h1><h3 id="1、安装hexo"><a href="#1、安装hexo" class="headerlink" title="1、安装hexo"></a>1、安装hexo</h3><p>在电脑硬盘里单独建立一个文件夹（此处在E盘建立bolg文件夹，以下演示均是在此文件夹下），打开 node.js 的控制台，输入以下代码安装 hexo。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo -g</span><br></pre></td></tr></table></figure>
 <p><img src="/img/20180621/install.png" alt="安装hexo"></p>
 <h3 id="2、初始化"><a href="#2、初始化" class="headerlink" title="2、初始化"></a>2、初始化</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm init</span><br></pre></td></tr></table></figure>
@@ -347,6 +347,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/07/02/Git常用指令/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Git常用指令
+        
+      </div>
+    </a>
+  
   
     <a href="/2018/06/21/information/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Information</div>
@@ -475,7 +484,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,15 +492,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">生活</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">-测试 -随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
