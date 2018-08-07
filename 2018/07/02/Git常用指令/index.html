@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Git常用指令 | LinXinfu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="##1、Git设置用户信息##12git config --global user.name &amp;quot;Your Name&amp;quot; //设置用户名git config --global user.email &amp;quot;Your Email&amp;quot; //设置用户邮箱">
+  <meta name="description" content="1、Git设置用户信息12git config --global user.name &amp;quot;Your Name&amp;quot; //设置用户名git config --global user.email &amp;quot;Your Email&amp;quot; //设置用户邮箱">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用指令">
 <meta property="og:url" content="http://yoursite.com/2018/07/02/Git常用指令/index.html">
 <meta property="og:site_name" content="LinXinfu">
-<meta property="og:description" content="##1、Git设置用户信息##12git config --global user.name &amp;quot;Your Name&amp;quot; //设置用户名git config --global user.email &amp;quot;Your Email&amp;quot; //设置用户邮箱">
+<meta property="og:description" content="1、Git设置用户信息12git config --global user.name &amp;quot;Your Name&amp;quot; //设置用户名git config --global user.email &amp;quot;Your Email&amp;quot; //设置用户邮箱">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-03T11:02:38.282Z">
+<meta property="og:updated_time" content="2018-08-07T12:22:11.834Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git常用指令">
-<meta name="twitter:description" content="##1、Git设置用户信息##12git config --global user.name &amp;quot;Your Name&amp;quot; //设置用户名git config --global user.email &amp;quot;Your Email&amp;quot; //设置用户邮箱">
+<meta name="twitter:description" content="1、Git设置用户信息12git config --global user.name &amp;quot;Your Name&amp;quot; //设置用户名git config --global user.email &amp;quot;Your Email&amp;quot; //设置用户邮箱">
   
     <link rel="alternative" href="/atom.xml" title="LinXinfu" type="application/atom+xml">
   
@@ -189,11 +189,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##1、Git设置用户信息##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot; //设置用户名</span><br><span class="line">git config --global user.email &quot;Your Email&quot; //设置用户邮箱</span><br></pre></td></tr></table></figure></p>
+        <h2 id="1、Git设置用户信息"><a href="#1、Git设置用户信息" class="headerlink" title="1、Git设置用户信息"></a>1、Git设置用户信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot; //设置用户名</span><br><span class="line">git config --global user.email &quot;Your Email&quot; //设置用户邮箱</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>##2、Git 生成ssh密钥##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;Your Email&quot;</span><br></pre></td></tr></table></figure></p>
-<p>##3、Git 检查ssh连接是否成功##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@主机名</span><br><span class="line">例如：</span><br><span class="line">ssh -T git@git.koal.com</span><br></pre></td></tr></table></figure></p>
-<p>##4、Git生成仓库指令##<br>注：提前是要先进入指定的某个文件夹下。</p>
+<h2 id="2、Git-生成ssh密钥"><a href="#2、Git-生成ssh密钥" class="headerlink" title="2、Git 生成ssh密钥"></a>2、Git 生成ssh密钥</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;Your Email&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="3、Git-检查ssh连接是否成功"><a href="#3、Git-检查ssh连接是否成功" class="headerlink" title="3、Git 检查ssh连接是否成功"></a>3、Git 检查ssh连接是否成功</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@主机名</span><br><span class="line">例如：</span><br><span class="line">ssh -T git@git.koal.com</span><br></pre></td></tr></table></figure>
+<h2 id="4、Git生成仓库指令"><a href="#4、Git生成仓库指令" class="headerlink" title="4、Git生成仓库指令"></a>4、Git生成仓库指令</h2><p>注：提前是要先进入指定的某个文件夹下。</p>
 <ul>
 <li><p><strong>生成仓库</strong> :</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
@@ -208,17 +208,16 @@
 <li><strong>将文件添加到仓库</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;备注信息&quot;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>##5、Git 关联本地仓库到远程仓库##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:linxinfu/test.git</span><br></pre></td></tr></table></figure></p>
+<h2 id="5、Git-关联本地仓库到远程仓库"><a href="#5、Git-关联本地仓库到远程仓库" class="headerlink" title="5、Git 关联本地仓库到远程仓库"></a>5、Git 关联本地仓库到远程仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:linxinfu/test.git</span><br></pre></td></tr></table></figure>
 <p>注：上面的地址要换成仓库独一无二的地址。</p>
-<p>##6、git push的 -u 参数##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
+<h2 id="6、git-push的-u-参数"><a href="#6、git-push的-u-参数" class="headerlink" title="6、git push的 -u 参数"></a>6、git push的 -u 参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 <p>上面指令是将内容推送到origin主机的master分支上</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 <p>以上指令是将本地的master分支推送到origin主机，同时指定origin为默认主机，以后就可以不带参数的使用<code>git push</code>。</p>
-<p>##7、查看状态##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></p>
-<p>##8、文件比较##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git diff  fileName   //工作区与暂存区比较</span><br><span class="line">git diff commitId fileName  //与某一次提交进行比较</span><br><span class="line">git diff branchName fileName  //当前分支的文件与branchName 分支的文件进行比较</span><br><span class="line">git diff HEAD filepath  //工作区与HEAD ( 当前工作分支) 比较</span><br></pre></td></tr></table></figure></p>
-<p>##9、查看提交日志##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure></p>
-<p>##10、删除文件##</p>
-<ul>
+<h2 id="7、查看状态"><a href="#7、查看状态" class="headerlink" title="7、查看状态"></a>7、查看状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+<h2 id="8、文件比较"><a href="#8、文件比较" class="headerlink" title="8、文件比较"></a>8、文件比较</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git diff  fileName   //工作区与暂存区比较</span><br><span class="line">git diff commitId fileName  //与某一次提交进行比较</span><br><span class="line">git diff branchName fileName  //当前分支的文件与branchName 分支的文件进行比较</span><br><span class="line">git diff HEAD filepath  //工作区与HEAD ( 当前工作分支) 比较</span><br></pre></td></tr></table></figure>
+<h2 id="9、查看提交日志"><a href="#9、查看提交日志" class="headerlink" title="9、查看提交日志"></a>9、查看提交日志</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br></pre></td></tr></table></figure>
+<h2 id="10、删除文件"><a href="#10、删除文件" class="headerlink" title="10、删除文件"></a>10、删除文件</h2><ul>
 <li><p><strong>删除工作区的文件</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rm fireName</span><br></pre></td></tr></table></figure>
 </li>
@@ -227,9 +226,9 @@
 </li>
 </ul>
 <p>注：文件名后面加点表示删除所有文件</p>
-<p>##11、分支管理##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git branch branchName //创建分支</span><br><span class="line">git branch  //查看当前分支</span><br><span class="line">git branch -a //查看当前所有分支</span><br><span class="line">git checkout branchName  //跳到相应分支</span><br><span class="line">git branch -b branchName //创建并跳到相应分支</span><br><span class="line">git branch -d branchName //删除分支</span><br><span class="line">git merge branchName  //合并某分支到当前分支</span><br></pre></td></tr></table></figure></p>
+<h2 id="11、分支管理"><a href="#11、分支管理" class="headerlink" title="11、分支管理"></a>11、分支管理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git branch branchName //创建分支</span><br><span class="line">git branch  //查看当前分支</span><br><span class="line">git branch -a //查看当前所有分支</span><br><span class="line">git checkout branchName  //跳到相应分支</span><br><span class="line">git checkout -b branchName //创建并跳到相应分支</span><br><span class="line">git branch -d branchName //删除分支</span><br><span class="line">git merge branchName  //合并某分支到当前分支</span><br></pre></td></tr></table></figure>
 <p>注：合并分支的时候需要push一下才会更新到远程仓库。</p>
-<p>##12、撤销修改##<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- fireName</span><br></pre></td></tr></table></figure></p>
+<h2 id="12、撤销修改"><a href="#12、撤销修改" class="headerlink" title="12、撤销修改"></a>12、撤销修改</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -- fireName</span><br></pre></td></tr></table></figure>
 <p>注：这个指令适用于撤销工作区和暂存区的修改：<br>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；<br>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。<br>总之，就是让这个文件回到最近一次git commit或git add时的状态。</p>
 
       
@@ -344,6 +343,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2018/07/10/MD5算法理解/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MD5算法理解
+        
+      </div>
+    </a>
   
   
     <a href="/2018/06/21/hexo-github博客搭建个人博客(1)/" id="article-nav-older" class="article-nav-link-wrap">
@@ -490,6 +498,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MD5</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网络</a>
               </li>
             
             <div class="clearfix"></div>
