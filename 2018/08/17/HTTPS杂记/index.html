@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | LinXinfu</title>
+  <title>HTTPS杂记 | LinXinfu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LinXinfu">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="HTTPS协议简介为什么是协议简介呢？因为https涉及的东西实在太多了，尤其是一些加密算法，非常的复杂，对于这些算法面的东西就不去深入研究了，这部分仅仅是梳理一下一些关于https最基本的原理。">
+<meta name="keywords" content="网络,HTTPS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTPS杂记">
+<meta property="og:url" content="http://yoursite.com/2018/08/17/HTTPS杂记/index.html">
 <meta property="og:site_name" content="LinXinfu">
+<meta property="og:description" content="HTTPS协议简介为什么是协议简介呢？因为https涉及的东西实在太多了，尤其是一些加密算法，非常的复杂，对于这些算法面的东西就不去深入研究了，这部分仅仅是梳理一下一些关于https最基本的原理。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-17T17:13:26.431Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LinXinfu">
+<meta name="twitter:title" content="HTTPS杂记">
+<meta name="twitter:description" content="HTTPS协议简介为什么是协议简介呢？因为https涉及的东西实在太多了，尤其是一些加密算法，非常的复杂，对于这些算法面的东西就不去深入研究了，这部分仅仅是梳理一下一些关于https最基本的原理。">
   
     <link rel="alternative" href="/atom.xml" title="LinXinfu" type="application/atom+xml">
   
@@ -159,36 +164,114 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-HTTPS杂记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/17/HTTPS杂记/" class="archive-article-date">
-  	<time datetime="2018-08-17T09:14:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/17/HTTPS杂记/">HTTPS杂记</a>
+    <h1 class="article-title" itemprop="name">
+      HTTPS杂记
     </h1>
   
 
-        <div class="article-info info-on-right">
+        
+        <a href="/2018/08/17/HTTPS杂记/" class="archive-article-date">
+  	<time datetime="2018-08-17T09:14:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-17</time>
+</a>
+        
+        
+          <span class="archive-article-date">
+            阅读量 
+          <span id="busuanzi_value_page_pv"></span></span>
           
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="HTTPS协议简介"><a href="#HTTPS协议简介" class="headerlink" title="HTTPS协议简介"></a>HTTPS协议简介</h3><p>为什么是协议简介呢？因为https涉及的东西实在太多了，尤其是一些加密算法，非常的复杂，对于这些算法面的东西就不去深入研究了，这部分仅仅是梳理一下一些关于https最基本的原理。</p>
+<a id="more"></a>
+<h3 id="身份认证"><a href="#身份认证" class="headerlink" title="身份认证"></a>身份认证</h3><p>https协议中身份认证主要是由数字证书来完成的，证书的主要内容有公钥、证书主体、数字签名等内容组成。服务端会将数字证书发给客户端，客户端会对证书进行验证，并获取用于密钥交换的非对称密钥。</p>
+<h4 id="（1）-数字证书的两个作用："><a href="#（1）-数字证书的两个作用：" class="headerlink" title="（1） 数字证书的两个作用："></a>（1） 数字证书的两个作用：</h4><ol>
+<li>身份授权: 确保浏览区访问的网站是经过CA验证的可信任的网站。</li>
+<li>分发公钥：每个数字证书都包含了注册者生成的公钥，在SSL握手时会通过certificate消息传输给客户端。</li>
+</ol>
+<h4 id="（2）申请一个受信任的数字证书流程："><a href="#（2）申请一个受信任的数字证书流程：" class="headerlink" title="（2）申请一个受信任的数字证书流程："></a>（2）申请一个受信任的数字证书流程：</h4><ol>
+<li>终端实体（可以使网站或者终端硬件）生成公私钥和证书请求</li>
+<li>RA（证书注册及审核机构）检查实体的合法性。如果个人或者小网站，这一步不是必须的。</li>
+<li>CA（证书签发机构）签发证书，发送给申请者。</li>
+<li>证书更新到repository（负责数字证书及CRL内容存储和分发），终端后续从repository更新证书，查询证书状态等。</li>
+</ol>
+<h4 id="（3）数字证书验证："><a href="#（3）数字证书验证：" class="headerlink" title="（3）数字证书验证："></a>（3）数字证书验证：</h4><p>申请者拿到CA签发的证书并部署在网站后，浏览器发起握手接收到证书后，如何确认这个证书就是CA签发的呢？如何避免这个证书被伪造呢。答案就是通过签名，签名相当于防伪标志。数字签名的制作和验签如下：</p>
+<p>1.<strong>数字签名的生成</strong>： 首先对内容进行摘要，用私钥对摘要进行加密形成签名；</p>
+<p>2.<strong>数字签名的验签</strong>： 使用公钥进行解密后，用相同的摘要算法对证书内容进行签名并且和服务端签名里的签名内容进行比较。</p>
+<h4 id="（4）注意："><a href="#（4）注意：" class="headerlink" title="（4）注意："></a>（4）注意：</h4><ul>
+<li>数字签名签发和校验使用的是CA自己的公私密钥，跟证书申请者提交的公钥没有关系。</li>
+<li>数字签名的签发过程跟公钥解密的过程刚好相反，即是用私钥加密公钥解密。</li>
+<li>现在大多数的CA都会有证书链，证书链的好处是安全，保持根CA的私钥能离线使用，第二个好处是方便部署和撤销，即如果证书出现问题，只需要撤销相应级别的证书，根证书依旧是安全的。</li>
+</ul>
+<h3 id="连接过程"><a href="#连接过程" class="headerlink" title="连接过程"></a>连接过程</h3><p>任何的TCP协议在传输数据之前都要进行TCP三次握手，HTTPS也不例外。根据RFC 2818标准，浏览器自动通过连接了443端口来相应HTTPS请求。</p>
+<h3 id="客户端请求"><a href="#客户端请求" class="headerlink" title="客户端请求"></a>客户端请求</h3><p>TLS将全部的通信以不同的方式包裹为“记录”。浏览器首先发起对服务器的问候，它表示一个“握手”记录。在浏览器问候中，包含Session ID、可支持的密文族等数据。</p>
+<h4 id="（1）-Session-ID"><a href="#（1）-Session-ID" class="headerlink" title="（1） Session ID"></a>（1） Session ID</h4><p>在会话的过程中，如果处于某种原因使得对话中断，为了避免重新握手而造成的访问效率低下，就引入了Session ID的概念。就是每一次对话都有一个编号，如果对话中断，下次重连的时候只需要客户端提供这个编号，服务器有这个编号的记录，双方就可以重新使用已有的密钥，而不必重新生成一把。Session ID是目前所有浏览器都支持的方法，但Session id会话复用有2个缺点：</p>
+<ul>
+<li>服务器会大量堆积会话，特别是在实际使用时，会话老化时间配置为数小时，这种情况对服务器内存占用非常高。</li>
+<li>如果服务器是集群模式搭建，那么客户端和A各自保存的会话，在合B尝试会话复用时会失败（当然，你想用redis搭个集群存session id也行，就是太麻烦）。</li>
+</ul>
+<p>session ticket就是为了解决上述问题而诞生的，目前只有Firefox和Chrome浏览器支持。</p>
+<h4 id="（2）密文族（Cipher-Suites）："><a href="#（2）密文族（Cipher-Suites）：" class="headerlink" title="（2）密文族（Cipher Suites）："></a>（2）密文族（Cipher Suites）：</h4><p>密文族是浏览器所支持的加密算法的清单。RFC2246中建议了很多种组合，一般写法是”密钥交换算法-对称加密算法-哈希算法。以“TLS_RSA_WITH_AES_256_CBC_SHA”为例，TLS为协议，RSA为密钥交换的算法，AES_256_CBC是对称加密算法（其中256是密钥长度，CBC是分组方式），SHA是哈希的算法。浏览器支持的加密算法一般会比较多，而服务端会根据自身的业务情况选择比较适合的加密组合发给客户端。（比如综合安全性以及速度、性能等因素）</p>
+<h3 id="服务器回复"><a href="#服务器回复" class="headerlink" title="服务器回复"></a>服务器回复</h3><p>服务器在收到client hello后，会回复三个数据包,下面分别看一下：</p>
+<ol>
+<li>我们得到了服务器的以Unix时间格式记录的UTC和28字节的随机数。</li>
+<li>Seesion ID，服务端对于session ID一般会有三种选择：</li>
+</ol>
+<ul>
+<li>恢复的session ID：我们之前在client hello里面已经提到，如果client hello里面的session ID在服务端有缓存，服务端会尝试恢复这个session；</li>
+<li>新的session ID：这里又分两种情况，第一种是client hello里面的session ID是空值，此时服务端会给客户端一个新的session ID，第二种是client hello里面的session ID此服务器并没有找到对应的缓存，此时也会回一个新的session ID给客户端；</li>
+<li>NULL：服务端不希望此session被恢复，因此session ID为空。</li>
+</ul>
+<ol start="3">
+<li>我们记得在client hello里面，客户端给出了21种加密族，而在我们所提供的21个加密族中，服务端挑选了“TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256”。这就意味着服务端会使用ECDHE-RSA算法进行密钥交换，通过AES_128_GCM对称加密算法来加密数据，利用SHA256哈希算法来确保数据完整性。这是百度综合了安全、性能、访问速度等多方面后选取的加密组合。</li>
+</ol>
+<h3 id="数字证书"><a href="#数字证书" class="headerlink" title="数字证书"></a>数字证书</h3><p>当服务器将以上的两个报文发给客户端后，这时发了一个<code>server hello done</code> 的报文，意思是告诉客户端hello结束，并且不要求验证客户端的证书。（TLS协议中验证证书可以是双向的，即服务端也要验证客户端的身份来防止客户端的伪冒，但是这种场景在一般基于web的https中很少(通过U盾的网银是例外，U盾其实就是客户端证书，但这样也非常繁琐)，因为基于web的应用客户数量大，很难为每个客户去提供相应的数字证书。但是对于一些企业之间的对接，出于安全考虑，很多情况下会采用双向认证的方式，因为对于两个企业来说也不存在client、server端的说法。）   </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -204,342 +287,105 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/08/17/HTTPS杂记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/14/FireBird数据库字段自增问题/" class="archive-article-date">
-  	<time datetime="2018-08-14T08:23:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-14</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/14/FireBird数据库字段自增问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">FireBird数据库字段自增问题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/14/FireBird数据库字段自增问题/">FireBird数据库字段自增问题</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">FireBird</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/10/网上学习资源/" class="archive-article-date">
-  	<time datetime="2018-08-10T07:41:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/10/网上学习资源/">优质文章资源</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/08/10/BASE64/" class="archive-article-date">
-  	<time datetime="2018-08-10T07:35:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/10/BASE64/">BASE64编码</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">base64</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/20/Linux指令练习/" class="archive-article-date">
-  	<time datetime="2018-07-20T02:21:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/20/Linux指令练习/">Linux指令练习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/18/AES代码实现/" class="archive-article-date">
-  	<time datetime="2018-07-18T07:48:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/18/AES代码实现/">AES算法实现</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/15/网络七层模型/" class="archive-article-date">
-  	<time datetime="2018-07-15T12:03:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/15/网络七层模型/">网络七层模型</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">网络</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/10/MD5算法理解/" class="archive-article-date">
-  	<time datetime="2018-07-10T10:04:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/10/MD5算法理解/">MD5算法理解</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MD5</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/02/Git常用指令/" class="archive-article-date">
-  	<time datetime="2018-07-02T08:23:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/02/Git常用指令/">Git常用指令</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/21/hexo-github博客搭建个人博客(1)/" class="archive-article-date">
-  	<time datetime="2018-06-20T18:03:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/21/hexo-github博客搭建个人博客(1)/">Hexo + Github博客搭建个人博客（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
   
 
 
@@ -567,8 +413,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
